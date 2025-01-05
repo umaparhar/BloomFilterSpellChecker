@@ -2,6 +2,13 @@ import math
 import pickle
 
 class BloomFilter:
+    """Bloom Filter class
+
+    Attributes:
+        size: size of bloom filter bit array
+        num_hashes: optimal number of hashes for this bloom filter. this is not currently implemented
+        bit_array: bloom filter bit array
+    """
     def __init__(self, size, num_hashes):
         self.size = size
         self.num_hashes = num_hashes

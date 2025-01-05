@@ -2,11 +2,15 @@ from bloomfilter import BloomFilter
 import math
 import sys
 
+# usage: python spellcheck.py <filename> <words to spell check>
+# example command: python spellcheck.py "/Users/umaparhar/Learning:Projects/BloomFilterSpellChecker/test" A Ab ABBBBBB
 arguments = sys.argv
 
 if len(arguments) <= 1:
     print("No arguments provided")
 
+# assumes you have already created your bloom filter & saved it to a file
+# if no bf has been created/saved, use the insert functions to insert your items into the BF
 filename = arguments[1]
 
 def count_lines(filename):
